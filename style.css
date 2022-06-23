@@ -12,11 +12,14 @@
 /* Inconsolata */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
+/* fascinate */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
 body{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
-    max-width: 60%;
+    max-width: 70%;
     /* box-shadow: 1px 1px 1px 1px black; */
     margin-top: 0;
     transition: 1s;
@@ -110,7 +113,7 @@ body{
 }
 @media screen and (max-width: 600px) {
     body{
-        max-width: 95%;
+        max-width: 90%;
     }
 
     h1{
@@ -195,7 +198,7 @@ body{
     padding: 10px;
 }
 .blog-card-main img{
-    max-height: 100%;
+    height: auto;
     width: 50%;
     border-radius: 15px;
 }
@@ -218,7 +221,7 @@ body{
 .replace-txt-main {display: none;}
 .blog-cards-main-replace{display: none;}
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 600px){
     .blog-card-main{display: none;}
     .blog-cards-main-replace{display: block;}
 }
@@ -226,25 +229,30 @@ body{
 .blog-cards{
     display: flex;
 }
-.card{margin: 10px;}
+.card{margin: 10px; width: 50%;}
 .card img{
     width: 100%;
     border-radius: 15px;
 }
 .card h1{font-family: Inconsolata; margin-top: 0; padding-top: 0; padding-bottom: 10px; margin-bottom: 0;}
-.card p{font-family: poppins; }
+.card p{font-family: poppins;}
 
 .card .replace-txt {display: none;}
 
 .card a{text-decoration: none; color: black;}
 
-.card h1{font-size: 25px;}
-.blog-card-main{margin-bottom: 50px;}
-@media screen and (max-width: 550px){
+.card h1{font-size: 30px; font-family: fascinate;}
+.blog-card-main {margin-bottom: 50px;}
+.blog-card-main h1{font-family: fascinate; font-size: 40px;}
 
+@media screen and (max-width: 600px){
     .blog-cards{display: block; margin: 0; padding: 0;}
 
     .blog-cards {padding: 5px; margin: 0;}
+
+    .blog-cards-main-replace h1{margin-top: 10px;}
+
+    .card{width: 100%;}
 
     footer {font-size: 13px; padding: 1px;}
 }
