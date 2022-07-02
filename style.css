@@ -12,22 +12,26 @@
 /* Inconsolata */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
+/* fascinate */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
 body{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
-    max-width: 60%;
+    width: 70%;
     /* box-shadow: 1px 1px 1px 1px black; */
     margin-top: 0;
     transition: 1s;
+    background-color: #fff9f9;
 }
 .navbar {display: fixed; width: 100%;}
+.navbar a{color:black; text-decoration: none;}
 /* light mode (main) css */
 .spectator{
     font-family: 'Space Mono';
     display: inline;
 }
-.nav a{text-decoration: none; color: black;}
 .hover-message{
     background-color: rgb(242, 242, 242);
     font-family: poppins;
@@ -41,14 +45,13 @@ body{
 .moon-dark{
     text-decoration: none;
     color: black;
-    cursor: pointer;
 }
 .moon-dark:hover .hover-message{
     display: inline;
     position:absolute;
     z-index: 1;
     top: 20px;
-    right: 22%;
+    right: 15%;
 }
 /* menu function */
 .menu {
@@ -63,7 +66,7 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
   }
-  
+  .menu span{color: black;}
   .menu-content {
     position: relative;
     top: 10%;
@@ -100,7 +103,7 @@ body{
 /* responsive design  */
 @media  screen and (max-width: 850px) {
     body{
-        max-width: 90%;
+        max-width: 80%;
     }
     .moon-dark:hover .hover-message{
         /* display: inline; */
@@ -154,10 +157,12 @@ body{
   .darkMode h1{
       color: white;
   }
+  .darkMode a{color: white;}
   .darkMode .moon-dark{
     text-decoration: none;
     color: white;
 }
+.darkMode span{color: white;}
 .darkMode .hover-message{
     background-color: rgb(51, 51, 51);
     font-weight: 500;
@@ -183,23 +188,29 @@ body{
   .darkMode .replace-txt-main{color: white;}
 
   .darkMode footer{background-color: rgb(34, 34, 34);}
+  .darkMode #flex-card1{border-right: 1px solid black;}
 
 /* dark mode css end*/
 /* styling the blog card  */
 .blog-card-main{
     /* border: 1px solid black; */
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 300px;
+    max-width: 800px;
     display: flex;
+    /* margin-bottom: 90px; */
     padding: 10px;
 }
+@media screen and (max-width: 1050px){
+    .blog-card-main p{display: none;}
+    .blog-card-main {padding-bottom: 0; margin-bottom: 0;}
+}
 .blog-card-main img{
-    max-height: 100%;
-    width: auto;
+    height: auto;
+    width: 50%;
     border-radius: 15px;
 }
 .container{
-    padding: 10px;
+    padding: 15px;
 }
 .container h1{
     font-family: Inconsolata;
@@ -215,47 +226,59 @@ body{
     color: black;
 }
 .replace-txt-main {display: none;}
+.blog-cards-main-replace{display: none;}
 
-@media screen and (max-width: 550px){
-    .container p{display: none;}
-    .replace-txt-main{display: block; font-size: 15px; font-family: poppins; height: auto;}
+@media screen and (max-width: 600px){
+    .blog-card-main{display: none;}
+    .blog-cards-main-replace{display: block;}
+}
 
-    .blog-card-main{
-        display:none;
-    }
-}
-@media screen and (max-width:300px){
-    .container p{
-        font-size: 13px;
-    }
-}
 .blog-cards{
     display: flex;
 }
-/* .card{margin: 10px;} */
+.card{ width: 50%; margin: 5px;}
 .card img{
     width: 100%;
     border-radius: 15px;
 }
-.card h1{font-family: Inconsolata; margin-top: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 0;}
-.card p{font-family: poppins; }
+.card h1{font-family: Inconsolata; margin-top: 0; padding-top: 0; padding-bottom: 10px; margin-bottom: 0;}
+.card p{font-family: poppins;}
 
 .card .replace-txt {display: none;}
 
 .card a{text-decoration: none; color: black;}
 
-@media screen and (max-width:550px){
-    .card p{display: none;}
+.card h1{font-size: 30px; font-family: poppins;}
+.blog-card-main {margin-bottom: 50px;}
+.blog-card-main h1{font-family: fascinate; font-size: 40px;}
 
-    .card .replace-txt{display: block; font-size: 15px;}
-
-    .card {height:300px;}
-    .blog-cards{display:block; margin:0;padding:0;}
+#flex-card1{
+    border-right: 1px solid rgb(85, 85, 85);
+    padding: 10px;
 }
-@media screen and (max-width: 350px){
-    .blog-cards {padding: 0; margin: 0;}
+#flex-cards2{
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .blog-cards{display: block; margin: 0; padding: 0;}
+
+    #flex-card1{border: none; padding: 0; margin: 0; padding-bottom: 10px;}
+    #flex-card2{border: none; padding: 0; margin: 0;}
+
+    .blog-cards {padding: 5px; margin: 0;}
+
+    .blog-cards-main-replace h1{margin-top: 10px; font-family: Space Mono  ;}
+
+    .card{width: 100%;}
+    .card h1{font-family: space mono;}
 
     footer {font-size: 13px; padding: 1px;}
-
+}
+@media screen and (max-width:450px) {
+    .card .replace-txt {display: block; padding: 0; margin: 0;}
+    .card h1{font-size: 20px;}
+    .card p{display: none}
+    .card{padding: 0; margin: 0;}
 }
 footer {background-color: rgb(242, 242, 242); font-family: poppins;width: 100%; padding: 5px; position:static; bottom: 0; right: 0; left: 0;}
