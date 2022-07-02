@@ -27,6 +27,7 @@ body{
     font-family: 'Space Mono';
     display: inline;
 }
+.nav a{text-decoration: none; color: black;}
 .hover-message{
     background-color: rgb(242, 242, 242);
     font-family: poppins;
@@ -40,6 +41,7 @@ body{
 .moon-dark{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 .moon-dark:hover .hover-message{
     display: inline;
@@ -98,7 +100,7 @@ body{
 /* responsive design  */
 @media  screen and (max-width: 850px) {
     body{
-        max-width: 80%;
+        max-width: 90%;
     }
     .moon-dark:hover .hover-message{
         /* display: inline; */
@@ -186,15 +188,14 @@ body{
 /* styling the blog card  */
 .blog-card-main{
     /* border: 1px solid black; */
-    max-height: 300px;
-    max-width: 800px;
+    max-height: 100%;
+    max-width: 100%;
     display: flex;
-    margin-bottom: 90px;
     padding: 10px;
 }
 .blog-card-main img{
     max-height: 100%;
-    width: 50%;
+    width: auto;
     border-radius: 15px;
 }
 .container{
@@ -220,14 +221,8 @@ body{
     .replace-txt-main{display: block; font-size: 15px; font-family: poppins; height: auto;}
 
     .blog-card-main{
-        display: block;
-        position:relative;
+        display:none;
     }
-    .blog-card-main img{
-        width: 100%;
-        height: auto;
-    }
-    .container{padding: 0;}
 }
 @media screen and (max-width:300px){
     .container p{
@@ -255,12 +250,10 @@ body{
     .card .replace-txt{display: block; font-size: 15px;}
 
     .card {height:300px;}
+    .blog-cards{display:block; margin:0;padding:0;}
 }
 @media screen and (max-width: 350px){
-
-    .blog-cards{display: block; margin: 0; padding: 0;}
-
-    .blog-card {padding: 0; margin: 0;}
+    .blog-cards {padding: 0; margin: 0;}
 
     footer {font-size: 13px; padding: 1px;}
 
