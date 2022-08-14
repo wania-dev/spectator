@@ -1,0 +1,300 @@
+/* font families  */
+
+/* Space Mono  */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+/* poppins  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Inconsolata */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+/* fascinate */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+/* poppins reg  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Roboto mono  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+body{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    width: 70%;
+    /* box-shadow: 1px 1px 1px 1px black; */
+    margin-top: 0;
+    transition: 1s;
+    background-color: #fff9f9;
+}
+/* responsive body  */
+@media screen and (max-width: 600px){
+    body{width: 90%;}
+}
+@media screen and (max-width: 800px){
+    body{width: 95%;}
+}
+a{text-decoration: none; color: black;}
+.navbar {display: fixed; width: 100%;}
+.navbar a{color:black; text-decoration: none;}
+/* light mode (main) css */
+.spectator{
+    font-family: 'Space Mono';
+    display: inline;
+}
+.hover-message{
+    background-color: rgb(242, 242, 242);
+    font-family: poppins;
+    font-weight: 550;
+    display: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 15px;
+    width: fit-content;
+}
+.moon-dark{
+    text-decoration: none;
+    color: black;
+}
+.moon-dark:hover .hover-message{
+    display: inline;
+    position:absolute;
+    z-index: 1;
+    top: 20px;
+    right: 15%;
+}
+/* menu function */
+.menu {
+    height: 100%;
+    font-family: poppins;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.93);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .menu span{color: black;}
+  .menu-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .menu a {
+    padding: 8px;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 28px;
+    color: #747474;
+    display: block;
+    transition: 0.4s;
+  }
+  
+  .menu a:hover {
+    color: black;
+    opacity: 1;
+  }
+  
+  .menu .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+  }
+  
+ /* menu function end   */
+
+/* responsive design  */
+@media  screen and (max-width: 850px) {
+    body{
+        max-width: 80%;
+    }
+    .moon-dark:hover .hover-message{
+        /* display: inline; */
+        position:absolute;
+        top: 20px;
+        right: 12%;
+    }
+}
+@media screen and (max-width: 600px) {
+    body{
+        max-width: 95%;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .moon-dark:hover .hover-message{
+        position:absolute;
+        top: 20px;
+        right: 8%;
+    }
+    .blogpageiframe{
+        height: 250px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .menu a {
+        font-size: 23px;
+      }
+    .menu .closebtn {
+    font-size: 35px;
+    top: 15px;
+    right: 35px;
+    }
+    .hover-message{
+        right: 5px;
+    }
+}
+/* dark mode css */
+.darkMode{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 1s;
+  }
+  .darkMode p{
+      color: white;
+  }
+  .darkMode h1{
+      color: white;
+  }
+  .darkMode a{color: white;}
+  .darkMode .moon-dark{
+    text-decoration: none;
+    color: white;
+}
+.darkMode span{color: white;}
+.darkMode .hover-message{
+    background-color: rgb(51, 51, 51);
+    font-weight: 500;
+}
+.darkMode .menu {
+    background-color: rgba(17, 17, 17, 0.93);
+    /* overflow-x: hidden; */
+    /* transition: 0.5s; */
+  }
+  
+  .darkMode .menu a {
+    color: #b4b4b4;
+  }
+  
+  .darkMode .menu a:hover {
+    color: white;
+    opacity: 1;
+  }
+  
+  .darkMode .menu .closebtn {
+    color: #b4b4b4;
+  }
+
+  .darkMode footer{background-color: rgb(16, 16, 16);}
+
+/* dark mode css end*/
+
+/* articles */
+.article{
+    width: 75%;
+    margin: auto;
+}
+.article h1{
+    font-size: 25px;
+}
+.article h3{
+    font-size: 18px;
+}
+.article h1, .article h3, .article h4{
+    text-align: center;
+    font-family: Poppins;
+    text-transform: capitalize;
+}
+.article .main-img{
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+.article p{
+    font-family: poppins;
+}
+.article .ftw {font-family: roboto mono;}
+
+.article a{font-family: roboto mono; font-weight: 600;}
+
+.article a:hover{text-decoration-line: underline;}
+
+.side-img{width: 50%; float: left; padding-right: 15px;}
+.right{float: right; padding-left: 15px;}
+footer{background: #f1f1f1; font-family: roboto mono; text-align: center; padding: 20px;}
+
+@media screen and (max-width: 500px) {
+    .article{padding-top: 10px;width: 95%;}
+    .article h1{
+        font-size: 20px;
+    }
+    .article h3{
+        font-size: 15px;
+    }
+    .side-img{display: block; float: none; margin: auto; width: 100%; padding: 0;}
+}
+/* blog cards */
+.flex-cards{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.card{
+    width: 50%;
+    border-radius: 15px;
+}
+.card img{
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    height: auto;
+    border-radius: 15px;
+}
+.card .title{
+    font-family: poppins;
+    padding: 0;margin: 0;
+    font-size: 4vmin;
+    text-align: center;
+}
+.card p{
+    font-family: poppins;
+    text-align: center;
+    padding: 0px 10px;
+}
+.card:hover{
+    -webkit-box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px black;
+}
+.darkMode .card:hover{
+    -webkit-box-shadow: 1px 1px 10px white;
+    box-shadow: 1px 1px 10px white;   
+}
+@media (max-width: 500px){
+    .flex-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 97%;
+    }
+    .card .title{font-size: 18px;}
+    .card p {font-size: 15px;}
+}
+footer{margin-top: 20px;}
